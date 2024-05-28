@@ -1,0 +1,31 @@
+1.disable
+2.style
+3.class
+4.innerText
+
+
+DIRECTIVES
+
+1.ngModel which is in FormsModule that was in @angular/forms.
+Syntax: [(ngModel)]="propertyName" //It can also update the property 
+ 
+2.*ngIf:structural Directive
+
+3.ngStyle: Built in Directives. []not part of directuve it means that we have to bind this directive.
+syntax: <tag [ngStyle] = "{key:value for styling css}"
+4.ngClass: Allows to dynamically add or remove classes.
+Example:
+component.ts file:
+@Component({
+  selector: 'server-component',
+  templateUrl: './server-component.component.html',
+  //styleUrls: ['./server-component.component.css']
+  styles:[`.online{
+    color:white;
+  }`]
+})
+[ngClass]="{online:ServerStatus ==='online'}
+
+new Date() //Date constructor for adding a date in your template
+
+ngFor='let i of somethingIterable; let i=index //sets the index.

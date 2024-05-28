@@ -1,0 +1,11 @@
+<label>Enter The ServerName Which you want to Add?</label><br><br>
+<input type="text" class="form-control" [(ngModel)]="serverName" />&nbsp;
+<!--[(ngModel)] was used to get two way data binding-->
+<button (click)="ServerCreated()" class="btn btn-primary" [disabled]="!allowUser"><!--PropertyBinding Concept-->
+    Add Server
+</button><hr><!--() used for event binding (click) is one of the mouse events-->
+<p *ngIf="serverCreationState; else elsecase">{{status}}</p>
+<ng-template #elsecase>No Server Created.</ng-template>
+<!--<p>{{status}}</p>-->
+<server-component></server-component>
+<server-component></server-component>

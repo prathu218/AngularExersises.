@@ -1,0 +1,6 @@
+<h4>Get the user name from user and display it using string interpolatio And Two way binding</h4>
+<hr>
+<label>Enter User Name:</label>
+<input type="text" (input)="disable()" [(ngModel)]="userName"/>&nbsp;&nbsp;
+<button (click)="display()" [disabled]="!state" >Display</button>
+<p><b>{{text}}</b></p>

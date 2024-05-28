@@ -1,0 +1,21 @@
+<h3>Example of Output Decorator Of Property Decorators.</h3>
+<h5>When we wan to pass the data child to parent we use it.
+    EventEmiter and emit() these are the two key points.
+</h5>
+<hr>
+<app-output (myEvent)="getData($event)" (data)="reciveData($event)"></app-output>
+<p>Child Data Recived That Was <b>{{message}}</b></p><hr>
+<div>
+  <table>
+    <thead>
+      <th>Id</th>
+      <th>Name</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dt of source">
+        <td>{{dt.id}}</td>
+        <td>{{dt.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

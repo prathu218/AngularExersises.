@@ -1,0 +1,5 @@
+<p><b>FormControl is a class which is provided by AngularForms module.(Important building block)</b><br>Represent a single input congtrol or a group of related input controls in form.</p>
+<hr>
+<!--formControl is not an attribute of input this is used to build reactive form now we import ReactiveFormsModule in module.ts-->
+<input type="text" [formControl]="usernameControl" placeholder="Enter userName"/>
+<button type="submit" (click)="showValue()">Show</button>

@@ -1,0 +1,18 @@
+<p><b>FormArray:</b> It is a class which represents a collection or an array of form controls,form groups or form arrays.</p>
+<hr>
+
+<form [formGroup]="employeeForm" (ngSubmit)="submitForm()">
+    <h2>Employee Form</h2>
+    <div formArrayName="employees">
+        <div class="employee-row" *ngFor="let emp of employees.controls;let i=index">
+            <div  [formGroupName]="i" class="employee-fields">
+            <label for="name">Name:</label>
+            <input type="text" formControlName="name" placeholder="Enter Employee Name..."/>
+            <label for="job">Job:</label>
+            <input type="text" formControlName="job" placeholder="Enter Employee Job.."/>
+            </div>
+        </div>
+    </div>
+    <button class="add-button" (click)="addEmployee()">Add Employee</button>
+    <button class="submit-button" type="submit">Submit</button>
+</form>

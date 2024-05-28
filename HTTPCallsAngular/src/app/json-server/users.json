@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 101,
+      "name": "XYX",
+      "email": "xyx@gmail.com"
+    },
+    {
+      "id": 102,
+      "name": "Update",
+      "email": "update@gmail.com"
+    },
+    {
+      "id": 103,
+      "name": "PRathamesh",
+      "email": "pratham@gmail.com"
+    },
+    {
+      "id": 104,
+      "name": "new",
+      "email": "te@gmail.com"
+    },
+    {
+      "id": 105,
+      "name": "onefive",
+      "email": "wsw@gmail.com"
+    },
+    {
+      "id": "106",
+      "name": "Six",
+      "email": "six@gmail.com"
+    }
+  ]
+}

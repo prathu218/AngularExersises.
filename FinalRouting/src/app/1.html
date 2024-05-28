@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vertical Line</title>
+<style>
+  .container {
+    position: relative;
+  }
+
+  .vertical-line {
+    position: absolute;
+    background-color: #2faaa4;
+    width: 2px; /* Adjust thickness as needed */
+    height: 75%;
+    left:12%; /* Adjust the left position if necessary */
+    top: 0;
+    transform: translateX(-100%);
+  }
+
+  .text-box {
+    margin-bottom: 20px; /* Adjust spacing between text boxes */
+  }
+
+  .text-input {
+    width: 200px; /* Adjust width as needed */
+  }
+
+  .status {
+    display: block;
+    margin-top: 10px; /* Adjust spacing between status and text boxes */
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="vertical-line"></div>
+  <div class="text-box">
+    <input type="text" placeholder="Enter text..." class="text-input" />
+  </div>
+  <div class="text-box">
+    <input type="text" placeholder="Enter text..." class="text-input" />
+  </div>
+  <div class="text-box">
+    <input type="text" placeholder="Enter text..." class="text-input" />
+  </div>
+  <span class="status">250 characters remaining</span>
+</div>
+
+</body>
+</html>

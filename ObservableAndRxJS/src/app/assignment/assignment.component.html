@@ -1,0 +1,20 @@
+<p>assignment works!</p>
+<hr>
+<div>
+    <h1>Fetching Data From JSON</h1>
+    <ng-container *ngIf="jsonData$ | async as data else loading" >
+        <table>
+            <thead>
+                <tr>
+                    <th>Categories</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let category of data">
+                    <td>{{category}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-container>
+    <ng-template #loading>Loading...</ng-template>
+</div>

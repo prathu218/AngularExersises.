@@ -1,0 +1,76 @@
+h2{
+    color: #fff;
+    font-size: 30px;
+  }
+  .employee-row {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+   
+  }
+  
+  .employee-fields {
+    border-radius: 5px;
+    padding: 10px;
+    width: 102%;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    height: 45px;
+    font-size: 20px;
+    color: #fff;
+  }
+  input,label{
+    position: relative;
+    top: 15%;
+    margin-left: 15px;
+  }
+  input{
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  .add-button {
+    margin-top: 10px;
+    background-color: #fff;
+    font-size: 15px;
+    padding: 12px 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
+  
+  .submit-button {
+    margin-top: 20px;
+    background-color: aquamarine;
+    font-size: 15px;
+    padding: 12px 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-left: 15px;
+  }
+  
+  /* .employee-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .employee-row {
+    width: 50%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  .employee-fields {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .add-button {
+    margin-top: 10px;
+  }
+  
+  .submit-button {
+    margin-top: 20px;
+  } */

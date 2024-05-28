@@ -1,0 +1,28 @@
+<h3>Click the Below button to get the data with http get() method.</h3>
+<hr>
+<button (click)="getData()">Get Data</button>
+
+<ng-container *ngIf="display">
+ <div>
+    <!--<pre>{{response$ | async | json}}</pre>-->
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address(zipcode)</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="(response$ | async) as data">
+            <tr *ngFor="let user of data">
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phone}}</td>
+                <td>{{user.address.street}},{{user.address.city}},{{user.address.zipcode}}</td>
+            </tr>
+        </tbody>
+    </table>
+ </div>
+</ng-container>

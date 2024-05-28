@@ -1,0 +1,5 @@
+<h4>If you want to post a data to a server click below</h4>
+<button (click)="postData()">Post</button>
+<ng-container *ngIf="success">
+<p [ngStyle]="{'color': 'green'}"><b>Successfull!!</b></p>
+</ng-container>

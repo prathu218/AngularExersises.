@@ -1,0 +1,41 @@
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col xs 12">
+      <button class="btn btn-primary" (click)="odd=!odd">
+        Odd Numbers
+      </button>
+      <br><br>
+      <ul class="list-group" *ngIf="!odd">
+        <li class="list-group-item" *ngFor="let num of EvenNumbers">{{num}}</li>
+            
+      </ul>
+      <ul class="list-group" *ngIf="odd">
+        <li class="list-group-item" *ngFor="let num of numbers">{{num}}</li>
+            
+      </ul>
+
+    </div>
+  </div>
+</div>
+<hr>
+<h4>Example to display a list using ngFor and ngIf Directive And Perform a toggle button Show List</h4>
+<hr>
+<div class="container">
+  <button class="btn btn-primary" (click)="display=!display">Show List</button>
+  <br><br>
+  <table  *ngIf="display">
+    <thead>
+      <th>ID</th>
+      <th>Product</th>
+      <th>Price</th>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let item of products">
+        <td>{{item.id}}</td>
+        <td>{{item.product}}</td>
+        <td>{{item.price}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

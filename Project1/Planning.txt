@@ -1,0 +1,17 @@
+Features
+1.Shopping List
+    1.ShoppingList
+    2.ShoppingListEdit
+    3.
+2.Recipe Book
+    1.RecipeList
+    2.RecipeItems
+    3.RecipeDetails.
+
+Components We Need
+<---------------------x------------------------->
+RootComponent(Home)
+HeaderComponent(NavBar)
+<--------------------x-------------------------->
+
+For Skipping the spec.ts file use ng g c Component --skip-tests this command.

@@ -1,0 +1,89 @@
+1.Installed Angular15 using npm install -g @angular/cli@15.x.x This Command x.x is refered the version.
+In Angular17 The All components are standalone(). The main idea behind Standalone Components is that you can build Angular components & apps without (or with less) @NgModules - i.e., Standalone Components allow you to write less (boilerplate) code.
+We can also build standalone components using standalone: true this prperty in @component{}.
+
+2.Structure of app-component.ts file
+
+
+
+.Cretated A Custom component using = ng g c Component_Name.
+When Created the Component We see a new Folder Containing 4 files .ts,specs.ts,.html,.css(.specs.ts is used for testing purpose.)
+
+We can also define html code in typescript code. 
+templateUrl: and styleUrls: (Main part) we can also add multiple files here using ,
+    i.template:'<component></component>' OR template:'<html>Code</html>' And for Multiline `Use this template literal in JS`
+    ii.style:[`
+                tagname{ style property;}
+               `]
+
+Component Selector: This has to be a unique name <xxx-xxx> We can not use main root component name.
+                    Also [componentX] by enclosing this we can add attribute selector but angular not working like this.
+                    To make it work wirte like this in html tags <div componentX></div>. Also making by class 
+                    in template or selector .componentX then we have to use <div class="componentX"></div>
+
+ Assignment1: Creating two Alert and Warning components and Display SuccessAlert and WarningAlert Messages.
+
+DataBinding Concepts: Communication between typescriptcode component to templates.
+                      1.String interpolation {{propertName}} 
+                      2.Property Binding ([property]="data")
+                      3.EventBinding ((event)="expression")
+                      4.Two-Way-Binding ([(ngModel)]="data")
+
+1.String interpolation: 
+Here we {{reference of variable OR string OR Method But we can't write control structure and multiline statements. }}
+Example:<p>Server {{'prathamesh'}} is Connected with ID= {{ID}} and the Status was {{ServerStatus}}</p>
+
+2.PropertyBinding: 
+When we Want to handle dynamic change inside the page.
+
+Assignment2. Add Input and Display Message Using Two Way Data Binding (Disable Button Only if user enter some text in input box)
+
+Directives in Angular: Instructions in DOM
+Structural Directives(Difined by *)
+1.ngIf Directive for Condition. syntax *ngIf and In Angular17 @ngIF(){}
+
+Use of defer in <script> tag
+
+Flow--> Loads index.html file.-->Main.ts-->bootstrap AppModule.
+
+ViewEncapsulation:- Emulated(default)
+                    None.
+                    ShadowDOM/Nativ
+
+Syntax:- @component{ encapsulation:ViewEncapsulation.None/ShadowDom}
+
+using local reference in templates: (can replace any html element tag)
+#localreference [This work only in the template not in typescript]
+
+HTMLInputElement.
+
+@ViewChild()
+
+
+#When we have to create our own directive do fiollowing steps.
+1.create a folder inside app give a name basichighlight.directive.ts Inside this export a class whih has a name BasicHighlightDirective{}
+2.Also add inside that @Directive{} And import {Directive} from '@angular/core
+3.Now inside@Directive{}= selector:'Always Unique' When we wrap this in [] then it will now recognice when we use without [].
+now inside export class{}=write a code what it will work. something like changing color 
+add constructor(private elemetRef:ElementRef){} which make this for only that perticular class.
+now constructor implements OnInit And now ngOnInit(){
+    this.elementRef.nativeElement.style.backgroundColor='somecolor';
+}
+
+Now we have to add inside the app.module.ts  
+Also we can make by using cli command that is  ng g d directivename
+Also we can use of better way insted of elementRef and ElementRef class use renderer and Renderer2
+with this we access multiple methods and properties let setStyle,setValue,addClss like this.
+constructor(private elementRef:ElementRef,private renderer:Renderer2){}
+inside the ngOnInit(){
+    this.render.setStyle(this.elementRef.nativeElement,'backgroundColor','value',optional flag)
+}
+
+Why?renderer When we try to change the dom we might get error when we not use renderer.
+Also see the use of HostListner @HostListener('mouseenter') mouseenter(eventData:Event){
+        this.elementRef.nativeElement.style.backgroundColor='pink';
+    }
+Also see the @HostBinding Decorator : @HostBinding('style.backgroundColor') backgroundColor:string='transparent';
+
+
+Also we can write our own structural directive.

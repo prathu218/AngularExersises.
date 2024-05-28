@@ -1,0 +1,7 @@
+<h4>Some Text Demo</h4>
+<hr>
+<button (click)="toggleText()">Display Content</button>
+<p *ngIf="state">Prathamesh</p>
+<p *ngFor="let items of count" [ngStyle]="{backgroundColor:items>=5?'blue':'transperent'}"
+    >{{items}}</p>
+
